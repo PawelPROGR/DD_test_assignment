@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <meta name="viewport" content="width=device-width">
+    <title>Обзор JavaScript</title>
+    <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
+    <link href="styles.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <script src="script.js"></script>
+    <script src="slider.js"></script>
+</head>
+
+<body>
+    <div class="pageWrapper">
+        <header id="header">
+            <nav class="NavCont">
+                <!--Данные ссылки не рабочии, для красоты, nav тег можно законметировать, от этого ничего не слетит-->
+                <ul>
+                    <li><a href="#">О JavaScript</a></li>
+                    <li><a href="#">Полезные сайты</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <h1>Обзор JavaScript</h1>
+            <div class='linkSites'>
+                <!--ссылки на сайты, можно переходить-->
+                <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">Документация</a>
+                <a class="link" href="https://www.npmjs.com/" target="_blank">NPM</a>
+                <a class="link" href="https://nodejs.org/en/" target="_blank">Node.js</a>
+            </div>
+        </header>
+        <div class="contentWrapper">
+            <div class="columnWrapper">
+                <div class="sidebar sidebar1">
+                    <h2>Содержание</h2>
+                    <ul class="sidebarBorder">
+                        <!-- к скрипту (script.js) интродакшен как и к другим блокам, прикреплено как !!содержимое!!, так и скрипт который листает картинки (строка 26-40), 
+                        также оно запускается вместе с Main.html с помощью window.onload = function() {introduction()};-->
+                        <h3 onclick="introduction()">
+                            <li class="content"><a href="#">Введение JavaScript</a></li>
+                        </h3>
+                        <h3 onclick="NodeJS()">
+                            <li class="content"><a href="#">Node.js</a></li>
+                        </h3>
+                        <h3 onclick="ReactJS()">
+                            <li class="content"><a href="#">React.js</a></li>
+                        </h3>
+                    </ul>
+                </div>
+                <div class="main">
+                    <h2 id="div1">Введение</h2>
+                    <h3 id="div2">JavaScript</h3>
+                    <p id="div3">дизайн не очень согласен, зато функционально!!</p>
+                    <!--Скроллится через scrollToTop в файле script.js (строка 119)-->
+                    <a href="#" class='scrollToTop' id="scrollToTop"> НАВЕРХ </a>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>По всем вопросом обращайтесь по указанному адресу электронной почты.</p>
+            <p>Контакты:
+                <a href="pawelwork@yahoo.com">pawelwork@yahoo.com</a>
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>
